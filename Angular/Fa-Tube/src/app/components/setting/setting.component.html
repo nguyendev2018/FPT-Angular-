@@ -1,0 +1,62 @@
+<p-dialog header="Setting" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '30vw'}"
+  [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+
+  <form [formGroup]="settingForm">
+
+    <div class="item-setting">
+      <span class="p-input-icon-left" [style]="{'display':'block'}">
+        <i class="pi pi-key"></i>
+
+        <input type="text" pInputText placeholder="Type your api key" [style]="{'width':'100%'}"
+          formControlName="apiKey">
+      </span>
+
+      <p-button icon="pi pi-shield" (click)="defaultOne('apiKey')" label="Default" styleClass="p-button-text">
+      </p-button>
+
+      <p-button icon="pi pi-check" (click)="applyOne('apiKey')" label="Apply"
+        styleClass="p-button-text p-button-warning"></p-button>
+
+    </div>
+
+    <div class="item-setting">
+      <span class="p-input-icon-left" [style]="{'display':'block'}">
+        <i class="pi pi-file"></i>
+        <input type="number" pInputText placeholder="Type number per page you want to show" [style]="{'width':'100%'}"
+          formControlName="numberPerPage">
+
+      </span>
+      <p-button icon="pi pi-shield" (click)="defaultOne('numberPerPage')" label="Default" styleClass="p-button-text">
+      </p-button>
+      <p-button icon="pi pi-check" (click)="applyOne('numberPerPage')" label="Apply"
+        styleClass="p-button-text p-button-warning"></p-button>
+
+    </div>
+
+    <div class="item-setting">
+      <span class="p-input-icon-left" [style]="{'display':'block'}">
+        <i class="pi pi-calendar-plus"></i>
+        <input type="number" pInputText placeholder="Type your time delay you want" [style]="{'width':'100%'}"
+          formControlName=dbTime>
+
+      </span>
+      <p-button icon="pi pi-shield" (click)="defaultOne('debounceTime')" label="Default" styleClass="p-button-text">
+      </p-button>
+      <p-button icon="pi pi-check" (click)="applyOne('debounceTime')" label="Apply"
+        styleClass="p-button-text p-button-warning"></p-button>
+
+    </div>
+
+
+
+  </form>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-shield" (click)="defaultAll()" label="Default all" styleClass="p-button-text">
+    </p-button>
+    <p-button icon="pi pi-check" (click)="applyAll()" label="Apply all" styleClass="p-button-text p-button-warning">
+    </p-button>
+  </ng-template>
+</p-dialog>
+
+<p-button (click)="showPositionDialog('top')" icon="pi pi-cog" label="Setting" styleClass="p-button">
+</p-button>

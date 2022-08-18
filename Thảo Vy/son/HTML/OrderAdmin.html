@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: auto;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WEB3013 ASM</title>
+    <link rel="stylesheet" href="Assets/Bootstrap/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="Assets/Fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="Assets/Fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="Assets/Fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="Assets/CSS/Copyright.css">
+    <link rel="stylesheet" href="Assets/CSS/DataTable.css">
+    <link rel="stylesheet" href="Assets/CSS/Form.css">
+    <link rel="stylesheet" href="Assets/CSS/HeaderBlue.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/CSS/LoginForm.css">
+    <link rel="stylesheet" href="Assets/CSS/Navigation.css">
+    <link rel="stylesheet" href="Assets/CSS/Style.css">
+    <link rel="stylesheet" href="Assets/CSS/UserInfo.css">
+</head>
+
+<body style="width: auto;color: #fff;height: auto;">
+<div>
+    <div class="header-blue" style="height: 75px;padding: 0 0 0 0;">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="width: auto;">QGarden</a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="width: 100%;">
+                    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="width: 100%;">
+                    <ul class="nav navbar-nav" style="width: auto;">
+                        <li class="nav-item" role="presentation" style="width: auto;">
+                            <a class="nav-link" href="#" style="color: #fff;">Dashboard</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav" style="width: auto;">
+                        <li class="nav-item" role="presentation" style="width: auto;">
+                            <a class="nav-link" href="#" style="color: #fff;">Products</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav" style="width: auto;">
+                        <li class="nav-item" role="presentation" style="width: auto;">
+                            <a class="nav-link" href="#" style="color: #fff;">Categorys</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav" style="width: auto;">
+                        <li class="nav-item" role="presentation" style="width: auto;">
+                            <a class="nav-link" href="#" style="color: #fff;">Orders</a>
+                        </li>
+                        <li class="nav-item" role="presentation" style="width: auto;">
+                            <a class="nav-link" href="#" style="color: #fff;">Users</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mr-auto" target="_self" style="width: auto;">
+                        <div class="form-group" style="width: auto;">
+                            <label for="search-field">
+                                <i class="fa fa-search" style="color: #fff;"></i>
+                            </label>
+                            <input class="form-control search-field" type="search" id="search-field" name="Search" placeholder="Bạn cần gì..." style="color: #fff;">
+                        </div>
+                    </form>
+                    <a class="btn btn-light action-button" role="button" href="#" style="color: #fff;margin-bottom: 0;width: auto;">Đăng Ký</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container" style="width: 80%;max-width: 90%;padding: 0;min-width: 0px;margin: 0 auto;height: auto;">
+    <h1 style="color: #000;margin: 0 auto;width: 100%;margin-top: 15px;margin-bottom: 15px;">Orders</h1>
+    <div class="shopping-cart">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col" class="border-0 bg-light">
+                        <div class="p-2 px-3 text-uppercase">Sản Phẩm</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                        <div class="py-2 text-uppercase">Giá</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                        <div class="py-2 text-uppercase">Số Lượng</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                        <div class="py-2 text-uppercase">Xóa</div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row" class="border-0">
+                        <div class="p-2">
+                            <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg"
+                                 alt="" width="70" class="img-fluid rounded shadow-sm">
+                            <div class="ml-3 d-inline-block align-middle">
+                                <h5 class="mb-0"><a href="#" class="text-dark d-inline-block align-middle">Timex Unisex
+                                    Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="border-0 align-middle"><strong>$79.00</strong></td>
+                    <td class="border-0 align-middle"><strong>3</strong></td>
+                    <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="p-2">
+                            <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-3_cexmhn.jpg"
+                                 alt="" width="70" class="img-fluid rounded shadow-sm">
+                            <div class="ml-3 d-inline-block align-middle">
+                                <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a>
+                                </h5><span
+                                    class="text-muted font-weight-normal font-italic">Category: Electronics</span>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="align-middle"><strong>$79.00</strong></td>
+                    <td class="align-middle"><strong>3</strong></td>
+                    <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="p-2">
+                            <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-2_qxjis2.jpg"
+                                 alt="" width="70" class="img-fluid rounded shadow-sm">
+                            <div class="ml-3 d-inline-block align-middle">
+                                <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a>
+                                </h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
+                            </div>
+                        </div>
+                    <td class="align-middle"><strong>$79.00</strong></td>
+                    <td class="align-middle"><strong>3</strong></td>
+                    <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav class="text-center">
+        <ul class="pagination" style="margin: 0 auto;margin-top: 20px;display: inline-block!important;">
+            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="clearfix"></div>
+<footer class="copyright" style="height: 80px;">
+    <div class="content">
+        Created With <i style="color: #e74c3c" class="fas fa-heart"></i> By Lê Minh Sơn &copy; 2020 <br>QGarden Owned By LMSQ Group &copy; 2020
+    </div>
+</footer>
+<script src="Assets/JS/JQuery.js"></script>
+<script src="Assets/Bootstrap/JS/Bootstrap.js"></script>
+
+<script src="Assets/JS/DataTable.JQuery.js"></script>
+<script src="Assets/JS/DataTable.Bootstrap.js"></script>
+</body>
+
+</html>

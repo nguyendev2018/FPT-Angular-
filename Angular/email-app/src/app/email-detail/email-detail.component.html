@@ -1,0 +1,21 @@
+<div class="detail">
+  <div class="header-detail">
+    <div class="header-detail-left">
+      <h3>{{email.subject}}</h3>
+      <span>{{email.from}}</span>&nbsp;<i class="pi pi-arrow-right">&nbsp;</i><span>{{email.to}}</span>
+    </div>
+    <div class="header-detail-right">
+       <span>{{email.date | date:'medium'}}</span>
+       <div class="action">
+        <button pButton type="button" class="p-button-info"><i class="pi pi-reply">&nbsp;</i>Reply</button>
+        <button pButton type="button" class="p-button-info"><i class="pi pi-forward">&nbsp;</i>Forward</button>
+        <button pButton type="button" class="p-button-info"><i class="pi pi-times">&nbsp;</i>Delete</button>
+       </div>
+    </div>
+ </div>
+ <div class="content">
+   <p [innerHtml]='email.body | body'></p>
+ </div>
+</div>
+
+

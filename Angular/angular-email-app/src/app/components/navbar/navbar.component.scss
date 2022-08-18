@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+        width: 70%;
+    }
+    &-right {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.btn-home {
+    min-width: 70px;
+}

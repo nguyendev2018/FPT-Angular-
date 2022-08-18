@@ -1,0 +1,46 @@
+#search-field::placeholder {
+  color: #f5f5f5f5;
+}
+
+button
+{
+  border: none!important;
+}
+
+.hidden
+{
+  display: none;
+  visibility: hidden;
+}
+
+.pagination {
+}
+
+.page-item {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.shopping-cart {
+  width: 100%;
+}
+
+#ProductImageList:nth-of-type(4n), #ProductContainer:nth-of-type(4n) {
+  margin-right: 0!important;
+}
+
+.clearfix {
+  width: 0!important;
+  height: 0!important;
+  clear: both!important;
+}
+
+a:not([href]) {
+  color: #007bff;
+}
+
+.full-row
+{
+  width: 100%;
+}

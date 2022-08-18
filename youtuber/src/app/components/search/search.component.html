@@ -1,0 +1,59 @@
+<div class="app-form">
+  <form [formGroup]="searchForm" (keyup.enter)="onSubmit()" >
+    <i class="pi pi-ellipsis-v" [style]="{'float':'right','margin-bottom':'20px'}"></i>
+    <input type="text" pInputText placeholder="Nhập tìm kiếm" formControlName="controlSearch" [style]="{'width':'100%'}"/>
+    <div class="form-group" [style]="{'margin-top':'20px'}">
+      <select pInputText class="custom-select" formControlName="optionSort">
+        <i class="pi pi-angle-down"></i>
+        <option value="" disabled>Order</option>
+        <option *ngFor="let op of option" [ngValue]="op">{{ op }}</option>
+      </select>
+      <span [style]="{'padding-left':'10px'}">From</span> 
+      <p-calendar type="date" value="2017-06-01" formControlName="controlDateTo"
+      ></p-calendar>
+     <span [style]="{'padding-left':'10px'}">To</span> 
+      <p-calendar
+        type="date"
+        value="2017-06-01"
+        formControlName="controlDateFrom"></p-calendar>
+    </div>
+  </form>
+  <div>
+    <ng-container *ngIf="videoResults">
+      <ul>
+        <li
+          [style]="{display: 'flex','justify-content': 'flex-start','align-items': 'center'}"
+          *ngFor="let video of videoResults">
+          <img
+            [src]="video.snippet.thumbnails.default.url"
+            alt="thumbnail video"/>
+          <h3
+            (click)="videoDetail(video.id.videoId)"
+            [style]="{ margin: '0', padding: '0 1rem 0 0' }">
+            {{ video.snippet.title }}
+          </h3>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+  <!-- <ng-container *ngIf="!video===null && !video===undefined"></ng-container> -->
+  <ng-container *ngIf="video">
+    <div [style]="{ 'background-color': 'lightgreen' }">
+      <h3>
+        {{ video.snippet.title }}
+      </h3>
+      <div
+        [style]="{display: 'flex','justify-content': 'flex-start','align-items': 'center'}">
+        <small>{{ video.statistics.viewCount }}</small>
+        <small>{{ video.statistics.likeCount }}</small>
+        <small>{{ video.statistics.dislikeCount }}</small>
+      </div>
+      <p style="white-space: line-break">
+        {{ video.snippet.description }}
+      </p>
+      <img [src]="video.snippet.thumbnails.medium.url" alt="thumbnail video" />
+      <iframe width="420" height="315" [src]="video.id | safeUrl"> </iframe>
+      <button>show video</button>
+    </div>
+  </ng-container>
+</div>

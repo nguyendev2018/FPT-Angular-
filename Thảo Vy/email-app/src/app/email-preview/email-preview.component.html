@@ -1,0 +1,26 @@
+<p-table
+  selectionMode="single"
+  [(selection)]="selectedMessage"
+  [value]="messageList"
+  (onRowSelect)="onMessageSelect($event)"
+  (onRowUnselect)="onMessageUnselect()"
+  *ngIf="messageList.length >= 1; else noMessage"
+  class="previewTable"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Sender</th>
+      <th>Subject</th>
+      <th>Date</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-mess>
+    <tr [pSelectableRow]="mess">
+      <td>{{ mess.from }}</td>
+      <td>{{ mess.subject }}</td>
+      <td>{{ mess.date | date: "dd/MM/yyyy" }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+<ng-template #noMessage> <p class="noMessage">No Message</p> </ng-template>
+<router-outlet></router-outlet>

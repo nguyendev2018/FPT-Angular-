@@ -1,0 +1,37 @@
+.todolist__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  .form-group {
+    width: 100%;
+    margin-right: 10px;
+    input {
+      background: rgba(222, 57, 99, 0.6);
+      border-radius: 0 25px 25px 0;
+      border: 0px;
+      color: #fff;
+      box-shadow: none;
+      height: 2.5rem;
+    }
+  }
+  .btnSubmit {
+    background-color: #fff;
+    color: #de3963;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid #de3963;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.error {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: red;
+}
+::placeholder {
+  color: #fff;
+}

@@ -1,0 +1,36 @@
+.detail{
+  position: absolute;
+  top:348px;
+  left: 7px;
+  width: 98%;
+}
+.header-detail{
+  display: flex;
+  height: 100px;
+  background-color: gainsboro;
+}
+
+.header-detail-left{
+  margin-left: 30px;
+  width: 990px;
+}
+.header-detail-left h3{
+  font-size: 22px;
+}
+.header-detail-left span, .content{
+  font-size: 18px;
+}
+
+.header-detail-right{
+  font-size: 18px;
+  margin-top: 20px;
+}
+.content{
+  padding: 0px 20px;
+} 
+.action{
+  padding-top: 10px;
+}
+.action button{
+  margin-right: 10px;
+}

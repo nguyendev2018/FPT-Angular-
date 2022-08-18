@@ -1,0 +1,49 @@
+<div class="form">
+	<div class="form-header">
+		<p>Sign Up</p>
+	</div>
+	<form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+		<div class="form-body">
+			<div class="form-group">
+				<label for="username">username</label>
+				<input type="text" pInputText class="form-control" id="username" placeholder="Enter username"
+					formControlName="username" />
+				<p class="error" *ngIf="isInvalidControl('username')">
+					<span *ngIf="getError('username', 'required')">Username is required!</span>
+					<span *ngIf="getError('username', 'minlength')">Username must have at least 4
+						characters!!</span>
+					<span *ngIf="getError('username', 'maxlength')">Username can be up to 50 characters!</span>
+				</p>
+			</div>
+			<div class="form-group">
+				<label for="email">e-mail</label>
+				<input type="text" pInputText class="form-control" id="email" placeholder="Enter email"
+					formControlName="email" />
+				<p class="error" *ngIf="isInvalidControl('email')">
+					<span *ngIf="getError('email', 'required')">Email is required!</span>
+					<span *ngIf="getError('email', 'email')">Email is invalid</span>
+				</p>
+			</div>
+			<div class="form-group">
+				<label for="password">password</label>
+				<input type="password" pInputText class="form-control" id="password" placeholder="Enter password"
+					formControlName="password" />
+				<p class="error" *ngIf="isInvalidControl('password')">
+					<span *ngIf="getError('password', 'required')">Password is required!</span>
+					<span *ngIf="getError('password', 'minlength')">Password must have at least 6
+						characters!!</span>
+					<span *ngIf="getError('password', 'maxlength')">Password can be up to 50 characters!</span>
+				</p>
+			</div>
+			<div class="form-group">
+				<label for="confirm">password again</label>
+				<input type="password" pInputText class="form-control" id="confirm" placeholder="Confirm password"
+					formControlName="confirm" />
+				<p class="error" *ngIf="isInvalidControl('confirm')">
+					<span *ngIf="getError('confirm', 'required')">Password confirm is required!</span>
+				</p>
+			</div>
+			<button type="submit" pButton label="REGISTER" class="p-button-success btn"></button>
+		</div>
+	</form>
+</div>

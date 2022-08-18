@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="login" style="overflow:hidden ;">
+        <img class="wave" src="img/wave.png">
+        <div class="container">
+            <div class="img">
+                <img src="img/bg.svg">
+            </div>
+            <div class="login-content">
+                <form >
+                    <img src="img/avatar.svg">
+                    <h2 class="title">Welcome</h2>
+                       <div class="input-div one">
+                          <div class="i">
+                                  <i class="fas fa-user"></i>
+                          </div>
+                          <div class="div">
+                                  <h5>Email</h5>
+                                  <input type="text" name="email" id="email" class="input">
+                            <small></small> 
+                          </div>
+                       </div>
+                       <div class="input-div pass">
+                          <div class="i"> 
+                               <i class="fas fa-lock"></i>
+                          </div>
+                          <div class="div">
+                               <h5>Password</h5>
+                               <input type="password" class="input" name="password" id="password">
+                            <small></small>
+                       </div>
+                    </div>
+                    <p class="click-login text-click_here">Click here Register ?</p>
+                    <button  class="btn btn-click btn-login" >Login</button>
+                </form>
+            </div>
+            <div id="output"></div>
+        </div>
+    </div>
+    <div class="register" style="overflow: hidden;">
+        <img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form >
+				<img src="img/avatar.svg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>User name</h5>
+           		   		<input type="text" name="username" id="username" class="input">
+                        <small></small> 
+           		   </div>
+           		</div>
+				   <div class="input-div one">
+					<div class="i">
+						<i class="fas fa-envelope-open"></i>
+					</div>
+					<div class="div">
+						<h5>Email</h5>
+						<input type="email" name="email" id="email_register" class="input">
+					  	<small></small> 
+					</div>
+				 </div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" name="password" id="password_register">
+                        <small></small>
+            	   </div>
+            	</div>
+				<div class="input-div pass">
+					<div class="i"> 
+						 <i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						 <h5>Re password</h5>
+						 <input type="password" class="input"  id="password2">
+					  <small></small>
+				 </div>
+			  </div>
+              <p class="click-login text-click_here">Click here Login ?</p>
+            	<button  class="btn btn-click btn-register" >Register</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="box-cms">
+        <div class="box-cms--header">
+            <h1>CMS</h1>
+            <ul class="box-cms--header_user">
+                <li class="box-cms--header_user__item icon-dots" style="margin-right: 3px;">
+                    <i class="fal fa-ellipsis-v-alt icon-up icon-click"></i>
+                </li>
+                <li class="box-cms--header_user__item">
+                    <i class="fas fa-user icon-user icon-click"></i>
+                    <i class="fal fa-chevron-up icon-up icon-click"></i>
+                    <ul>
+                        <li class="list-item item-click" data-show="edit"><i class="fas fa-user"></i> User Profile
+                        </li>
+                        <li class="list-item"><a href="login.html"> <i class="far fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <div class="box-cms--body">
+            <div class="box-cms--side">
+                <div class="box-search">
+                    <input type="text" class="input box-search--item" placeholder="Search ...">
+                    <a href="" class="box-click-search">
+                        <i class="fal fa-search icon-search"></i>
+                    </a>
+                </div>
+                <ul class="box-cms--list">
+                    <li class="list-item item-click" data-show="view">
+                        <i class="fas fa-table icon-li"></i> View content
+                    </li>
+                    <li class="list-item item-click" data-show="add">
+                        <i class="fas fa-list-alt icon-li"></i> Form content
+                    </li>
+                </ul>
+            </div>
+            <div class="box-cms--elements">
+                <div class="box-show edit" id="edit">
+                    <div class=" box-form box-form--cms">
+                        <div class="card-header">
+                            <h3>Profile Form Elements</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <form action="" id="forms">
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="firstname">First name</label>
+                                    <input type="text" class="input email" placeholder="Enter the first name"
+                                        id="firstname">
+                                    <small></small>
+                                </div>
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="lastname">Last name</label>
+                                    <input type="text" class="input email" placeholder="Enter the Last name"
+                                        id="lastname">
+                                    <small></small>
+                                </div>
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="Email ">Email</label>
+                                    <p id="pr_email"></p>
+                                </div>
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="phone">Phone</label>
+                                    <input type="number" class="input email" placeholder="Phone" id="phone">
+                                    <small></small>
+                                </div>
+                                <div class="form-group box-form--cms_group mb-30">
+                                    <label for="content">Content</label>
+                                    <textarea class="input" id="content" cols="30" rows="6"></textarea>
+                                    <small></small>
+                                </div>
+                                <div class="form-group mb-30">
+                                    <button class="button-cms button-submit">Submit button</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box-show view " id="view">
+                    <h2>View Content</h2>
+                    <table class="table-list mt-20">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Content</th>
+                                <th scope="col">CreateDate</th>
+                                <th scope="col">Delete</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">View</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+                        </tbody>
+                    </table>
+                    <div id="content__paging" class="content__paging">
+                        <ul>
+                            <li class="btn btn-prev ">
+                                <i class="fas fa-chevron-left"></i>
+                            </li>
+                            <div class="number-page" id="number-page">
+                            </div>
+                            <li class="btn btn-next  ">
+                                <i class="fas fa-chevron-right"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-show add-content" id="add">
+                    <div class=" box-form box-form--cms">
+                        <div class="card-header">
+                            <h3>Content Form Elements</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <form action="">
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="title">Title </label>
+                                    <input type="text" class="input email" placeholder="Enter the title" id="title">
+                                    <small></small>
+                                </div>
+                                <div class="form-group box-form--cms_group mb-30" style="margin-top:30px">
+                                    <label for="description">Description</label>
+                                    <textarea class="input" id="description" cols="30" rows="6"></textarea>
+                                    <small></small>
+                                </div>
+                                <div class="form-group box-form--cms_group mb-30" style="margin-top:30px">
+                                    <label for="content">Content</label>
+                                    <textarea class="input" id="content_el" cols="30" rows="6"></textarea>
+                                    <small></small>
+                                </div>
+                                <div class="form-group mb-30" style="margin-top:30px">
+                                    <button class="button-cms button-sm">Submit button</button>
+                                    <button class="button-cms">Reset button</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-show edit-content" id="edit_form">
+                    <h2>Edit Content</h2>
+                    <hr>
+                    <div class=" box-form box-form--cms">
+                        <div class="card-header">
+                            <h3>Content Form Elements</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <form id="edit-form-v2">
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="input email" placeholder="Enter the title" id="title_edit"
+                                        value=''>
+                                    <small></small>
+                                </div>
+                                <div class="form-group box-form--cms_group mb-30">
+                                    <label for="content">Content</label>
+                                    <textarea class="input" id="content_edit" value='' cols="30" rows="6"></textarea>
+                                    <small></small>
+                                </div>
+                                <div class="form-group mb-30">
+                                    <button id="submit-edit" class="button-cms button-submit_edit">Submit
+                                        button</button>
+                                    <button class="button-cms">Reset button</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-show view-content">
+                    <h2>View Content</h2>
+                    <hr>
+                    <div class=" box-form box-form--cms">
+                        <div class="card-header">
+                            <h3>Content Form Elements</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <form action="">
+                                <div class="form-group  box-form--cms_group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="input email" placeholder="Enter the title" id="title_view"
+                                        value='' readonly>
+                                    <small></small>
+                                </div>
+                                <div class="form-group box-form--cms_group mb-30">
+                                    <label for="content">Content</label>
+                                    <textarea class="input" id="content_view" readonly value='' cols="30"
+                                        rows="6"></textarea>
+                                    <small></small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js">
+    </script>
+    <script src="js/valition_register.js"></script>
+    <script src="js/font-awesome.js"></script>
+    <script src="js/id_toggle.js"></script>
+</body>
+
+</html>

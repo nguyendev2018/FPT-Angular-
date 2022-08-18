@@ -1,0 +1,21 @@
+<div class="table">
+  <p-table [value]="emails" [scrollable]="true" scrollHeight="230px">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Sender</th>
+        <th>Subject</th>
+        <th>Date</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-email>
+      <!-- <tr [routerLink]="['/mymessages/' + email.folder + '/' + email._id]"> -->
+      <tr routerLink="/mymessages/{{ email.folder }}/{{ email._id }}">
+        <td>{{ email.from | limitChars: 30 }}</td>
+        <td>{{ email.subject }}</td>
+        <td>{{ email.date | date: "yyyy-mm-dd" }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<router-outlet></router-outlet>

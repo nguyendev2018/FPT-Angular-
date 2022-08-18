@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+.mega-menu-custom {
+  width: 12.5rem;
+  /* background-color: darkgray!important; */
+  padding: 0.25rem 0;
+}
+
+.selected {
+  border-bottom: 1px solid;
+}
+
+.p-megamenu-horizontal .p-megamenu-root-list {
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+
+.p-megamenu-root-list>.p-menuitem {
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+  font-size: 14px;
+}
+
+.navbar-nav .nav-item {
+  padding: 0px 10px;
+  list-style: none;
+
+}
+
+.navbar-nav .nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.top_nav {
+  display: flex;
+  background: #0288d1;
+  color: white;
+  justify-content: space-between;
+}

@@ -1,0 +1,26 @@
+<header>
+  <div class="header__left">
+    <p-tabView #tabView (onChange)="redirect($event)">
+      <p-tabPanel header="Messages"></p-tabPanel>
+      <p-tabPanel header="Contacts"></p-tabPanel>
+      <p-tabPanel header="Preferences"></p-tabPanel>
+    </p-tabView>
+  </div>
+  <div class="header__right">
+    <form [formGroup]="formSelectedUser">
+      <p-dropdown
+        [options]="users"
+        formControlName="selectedUser"
+        (onChange)="handleChangeSelectedUser()"
+      ></p-dropdown>
+    </form>
+    <p-button icon="pi pi-home" iconPos="left" class="btn"></p-button>
+    <p-button
+      label="New Message"
+      icon="pi pi-envelope"
+      iconPos="left"
+      class="btn"
+    ></p-button>
+  </div>
+  <router-outlet></router-outlet>
+</header>

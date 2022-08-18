@@ -1,0 +1,45 @@
+<ng-container *ngIf="message; else noContent">
+    <div class="content">
+        <div class="content-header">
+            <div class="content-header-info">
+                <h3>{{ message.subject }}</h3>
+                <p>
+                    {{ message.from }}
+                    <span style="padding: 0 12px"
+                        ><i class="pi pi-arrow-right"></i
+                    ></span>
+                    {{ message.to }}
+                </p>
+            </div>
+            <div class="content-header-handle">
+                <p>{{ message.date | date: "medium" }}</p>
+                <div>
+                    <button
+                        pButton
+                        type="button"
+                        icon="pi pi-reply"
+                        label="Reply"
+                    ></button>
+                    <button
+                        pButton
+                        type="button"
+                        icon="pi pi-forward"
+                        label="Forward"
+                    ></button>
+                    <button
+                        pButton
+                        type="button"
+                        icon="pi pi-times"
+                        label="Delete"
+                    ></button>
+                </div>
+            </div>
+        </div>
+        <div class="content-body">
+            <p>{{ message.body }}</p>
+        </div>
+    </div>
+</ng-container>
+<ng-template #noContent>
+    <h1>Not Found Email</h1>
+</ng-template>

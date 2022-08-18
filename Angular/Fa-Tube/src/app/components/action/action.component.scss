@@ -1,0 +1,24 @@
+$font-size: 12px;
+:host ::ng-deep {
+  span.ng-tns-c64-1.p-dropdown-label.p-inputtext.p-placeholder.ng-star-inserted {
+    padding: 0.1rem 0.3rem;
+    font-size: $font-size;
+  }
+  .p-dropdown .p-dropdown-label {
+    font-size: $font-size;
+  }
+  input.ng-tns-c65-2.p-inputtext.p-component.ng-star-inserted {
+    padding: 0.1rem 0.3rem;
+    font-size: $font-size;
+  }
+  input.ng-tns-c65-3.p-inputtext.p-component.ng-star-inserted {
+    padding: 0.1rem 0.3rem;
+    font-size: $font-size;
+  }
+  .middle {
+    margin: 0 0.5rem;
+  }
+  small {
+    font-size: 12px;
+  }
+}

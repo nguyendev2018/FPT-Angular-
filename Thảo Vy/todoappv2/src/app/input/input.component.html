@@ -1,0 +1,17 @@
+<form class="todolist__form" [formGroup]="toDoForm" (ngSubmit)="handleAdd()">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      formControlName="name"
+      placeholder="Input to do"
+    />
+  </div>
+  <button class="btnSubmit"><fa-icon [icon]="faPlus"></fa-icon></button>
+</form>
+<!-- <p
+  class="error"
+  *ngIf="toDoForm.invalid && (toDoForm.touched || toDoForm.dirty)"
+>
+  Please input to do!
+</p> -->

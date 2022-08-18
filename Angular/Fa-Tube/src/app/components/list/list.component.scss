@@ -1,0 +1,31 @@
+h4,
+h3,
+p {
+  margin: 0;
+}
+.mr {
+  margin: 0 0 0 0.5rem;
+}
+
+.brief-infoVideo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .description {
+    margin: 0.4rem 0;
+  }
+}
+.wr-br-video {
+  padding: 1rem 0.5rem;
+  margin: 1rem 0;
+  transition: 0.3s ease-in-out;
+}
+.wr-br-video:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+:host ::ng-deep {
+  .p-paginator .p-paginator-last,
+  .p-paginator-first {
+    display: none;
+  }
+}

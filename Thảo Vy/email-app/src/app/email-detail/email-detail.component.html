@@ -1,0 +1,24 @@
+<section class="emailContent" *ngIf="message">
+  <div class="emailContent__header">
+    <div class="emailContent__left">
+      <h3 class="emailContent__subject">{{ message?.subject }}</h3>
+      <span class="emailContent__from"
+        >{{ message?.from }} <i class="pi pi-arrow-right"></i>
+      </span>
+      <span class="emailContent__to"> {{ message?.to }}</span>
+    </div>
+    <div class="emailContent__right">
+      <p class="emailContent__date">{{ message.date | date: "medium" }}</p>
+      <div class="btnFunc">
+        <p-button label="Reply" icon="pi pi-reply" iconPos="left"></p-button>
+        <p-button
+          label="Forward"
+          icon="pi pi-forward"
+          iconPos="left"
+        ></p-button>
+        <p-button label="Delete" icon="pi pi-trash" iconPos="left"></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="emailContent__body" [innerText]="message?.body"></div>
+</section>

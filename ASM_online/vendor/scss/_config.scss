@@ -1,0 +1,66 @@
+//ANCHOR color
+$primary:#808080;
+$title:#074F63;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+h1,h2,h3{
+    color: #074F63;
+}
+h1.title{
+font-size: 48px;
+}
+h2.title{
+    font-size: 48px;
+    line-height: 0;
+}
+h3.title{
+    font-size: 36px;
+}
+h4.title{
+    font-size: 24px;
+}
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Manjari', sans-serif;
+    font-weight: 700;
+    color: $primary;
+    background: #E5E5E5;
+}
+
+.container {
+    max-width: 972px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.max-container {
+    max-width: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+//ANCHOR mixin

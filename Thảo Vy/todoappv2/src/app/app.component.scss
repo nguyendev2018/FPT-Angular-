@@ -1,0 +1,48 @@
+.todolist {
+  width: 30%;
+  margin: 50px auto;
+  box-shadow: 0 0 6px grey;
+  background-color: #f5f8f9;
+  .card-header {
+    border-bottom: none;
+    margin-bottom: 20px;
+  }
+  .card-body {
+    .desPriority {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      .priority {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 5px;
+        &.p1 {
+          background-color: #cce5ff;
+          border-color: #b8daff;
+          margin-left: 10px;
+        }
+        &.p2 {
+          background-color: #e2e3e5;
+          border-color: #d6d8db;
+        }
+        &.p3 {
+          background-color: #fff3cd;
+          border-color: #ffeeba;
+        }
+        &.p4 {
+          background-color: #d1ecf1;
+          border-color: #bee5eb;
+        }
+        &.p5 {
+          background-color: #f8d7da;
+          border-color: #f5c6cb;
+        }
+      }
+      .priorityNumber {
+        margin-right: 10px;
+      }
+    }
+  }
+}

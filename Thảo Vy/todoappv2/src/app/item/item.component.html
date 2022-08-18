@@ -1,0 +1,36 @@
+<div class="todolist__content">
+  <div
+    class="alert todolist__item"
+    [ngClass]="{
+      'alert-success': item.status,
+      'alert-primary': !item.status && item.priority === 1,
+      'alert-secondary': !item.status && item.priority === 2,
+      'alert-warning': !item.status && item.priority === 3,
+      'alert-info': !item.status && item.priority === 4,
+      'alert-danger': !item.status && item.priority === 5
+    }"
+    (click)="changeStatus.emit(item.id)"
+  >
+    <span #itemName
+      >{{ item.name }} ({{ item.status ? "completed" : "incompleted" }})</span
+    >
+  </div>
+  <div class="btnFunc">
+    <button
+      class="btn btn-dark"
+      [disabled]="item.status || item.priority === 1"
+      (click)="downPriority.emit(item.id)"
+    >
+      <fa-icon [icon]="faDown"></fa-icon>
+    </button>
+    <button
+      class="btn btn-dark"
+      [disabled]="item.status || item.priority === 5"
+      (click)="upPriority.emit(item.id)"
+    >
+      <fa-icon [icon]="faUp"></fa-icon>
+    </button>
+    <button class="btn btn-danger" (click)="remove.emit(item.id)">X</button>
+  </div>
+  <ng-content></ng-content>
+</div>

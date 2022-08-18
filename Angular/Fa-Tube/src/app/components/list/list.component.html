@@ -1,0 +1,31 @@
+<ng-container *ngIf="videos">
+  <div>
+
+
+    <div *ngFor="let video of videos.items" class="wr-br-video" [routerLink]="video.id.videoId">
+      <div class="brief-infoVideo">
+        <img [src]="video.snippet.thumbnails.default.url" alt="thumbnail photo">
+        <div class="mr">
+          <h3>{{video.snippet.title}}</h3>
+          <h4>
+            {{video.snippet.channelTitle}}
+          </h4>
+          <p class="description">{{video.snippet.description}}</p>
+          <p> <small> {{video.snippet.publishTime|date:'dd-MMMM-yyyy'}}</small></p>
+        </div>
+
+      </div>
+    </div>
+    <!-- sanbox paginator -->
+
+    <!-- <p-paginator [rows]="50" [totalRecords]="totalLinkPage" [pageLinkSize]="totalLinkPage/100000"
+      (onPageChange)="paginate($event)"></p-paginator> -->
+
+    <p-paginator [rows]="query.numberPerPage" [totalRecords]="videos.pageInfo.totalResults"
+      (onPageChange)="paginate($event)" [showPageLinks]="false">
+    </p-paginator>
+
+
+    <!-- end sanbox paginator -->
+  </div>
+</ng-container>

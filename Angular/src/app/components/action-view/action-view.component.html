@@ -1,0 +1,29 @@
+  <div class="action-view">
+    <h1>
+      {{'a simple webapp order by'|uppercase}}
+    </h1>
+    <div class='action'>
+      <span class="p-input-icon-right">
+        <i class="pi pi-search" (click)="onSearch(keywordSearch)"></i>
+        <input type="text" pInputText [(ngModel)]="keywordSearch" (keyup.enter)=onSearch(keywordSearch)>
+      </span>
+
+
+      <p-dropdown [options]="criterias" [(ngModel)]="selectedCriteria" placeholder="Select a Field" optionLabel="name"
+        (onChange)="onSelectView()"></p-dropdown>
+
+      <p-dropdown [options]="directions" [(ngModel)]="directionSort" placeholder="Select a Field" optionLabel="name"
+        (onChange)="onSelectView()">
+        <i class="pi pi-sort-alpha-up"></i>
+        <!-- <i [class]="directionSort.code==='asc'?'pi pi-sort-alpha-up':'pi pi-sort-alpha-down'"></i> -->
+        <!-- <ng-container *ngIf="selectedCriteria.type==='string';else number">
+          <i [class]="directionSort.code==='asc'?'pi pi-sort-alpha-up':'pi pi-sort-alpha-down'"></i>
+        </ng-container>
+
+        <ng-template #number>
+          <i [class]="directionSort.code==='asc'?'pi pi-sort-amount-up':'pi pi-sort-amount-down'"></i>
+        </ng-template> -->
+      </p-dropdown>
+
+    </div>
+  </div>

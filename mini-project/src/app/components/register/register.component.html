@@ -1,0 +1,72 @@
+<div class="bg">
+  <form [formGroup]="searchForm">
+    <div class="form-general" [style]="{ 'margin-right': '1%' }">
+      <div class="form-group">
+        <label for="">Username</label>
+        <input pInputText type="text" formControlName="username" />
+        <div
+          class=""
+          *ngIf="username.invalid && (username.dirty || username.touched)"
+        >
+          <span class="error" *ngIf="username.errors?.required"
+            >Bạn phải nhập Username !</span
+          >
+          <span class="error" *ngIf="username.errors?.minlength">
+            Username phải nhập ít nhất 4 chữ
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" formControlName="email" pInputText />
+        <div class="" *ngIf="email.invalid && (email.dirty || email.touched)">
+          <span class="error" *ngIf="email.errors?.required"
+            >Bạn phải nhập Email !</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="form-general" [style]="{ 'margin-left': '1%' }">
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" formControlName="password" pInputText />
+        <div
+          class=""
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+        >
+          <span class="error" *ngIf="password.errors?.required"
+            >Bạn phải nhập password !</span
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Confirm Password</label>
+        <input type="password" pInputText formControlName="confirmPassword" />
+        <div
+          class=""
+          *ngIf="
+            confirmPassword.invalid &&
+            (confirmPassword.dirty || confirmPassword.touched)
+          "
+        >
+          <span class="error" *ngIf="confirmPassword.errors?.required"
+            >Bạn phải nhập confirmPassword !</span
+          >
+          <span class="error" *ngIf="confirmPassword.errors?.mustMatch"
+            >Mật khẩu chưa khớp !</span
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+  <button
+    class="button-login"
+    pButton
+    type="button"
+    (click)="signUp()"
+    [disabled]="!searchForm.valid"
+  >
+    Register
+  </button>
+</div>
+<p-messages [(value)]="msgs1" [enableService]="false"></p-messages>

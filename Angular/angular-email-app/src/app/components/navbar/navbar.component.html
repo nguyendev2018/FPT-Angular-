@@ -1,0 +1,15 @@
+<nav class="nav">
+    <div class="nav-left">
+        <p-tabMenu [model]="navItems" [activeItem]="navItems[0]"></p-tabMenu>
+    </div>
+    <div class="nav-right">
+        <p-dropdown [options]="itemsRight"></p-dropdown>
+        <button
+            pButton
+            icon="pi pi-home"
+            class="btn-home"
+            [routerLink]="['message', 'inbox']"
+        ></button>
+        <button pButton label="New Mesage" icon="pi pi-envelope"></button>
+    </div>
+</nav>

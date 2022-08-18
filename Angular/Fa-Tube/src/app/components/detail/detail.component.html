@@ -1,0 +1,41 @@
+<div class="wr-detail">
+  <img [src]="video?.snippet?.thumbnails?.standard?.url" alt="standard image video" srcset="">
+  <div class="wr-text-detail">
+    <h1>{{video?.snippet?.title}}</h1>
+    <div class="info-statistics">
+      <div>
+        <small>Views: {{video?.statistics.viewCount|currency:'VND':''}}</small>
+        <small>Duration: {{video?.contentDetails?.duration|duration}}</small>
+        <small>{{video?.snippet?.publishedAt|date:'dd-MMMM-yyyy'}}</small>
+      </div>
+      <div>
+        <small>Like: {{video?.statistics.likeCount}}</small>
+        <small>disLike: {{video?.statistics.dislikeCount}}</small>
+        <small>Comments: {{video?.statistics.favoriteCount}}</small>
+        <small>{{video?.status.madeForKids ? 'Rhis video make for kids': ''}}</small>
+      </div>
+    </div>
+    <h2>{{video?.snippet?.channelTitle}}</h2>
+    <div [style]="{'width':'100%', 'display':'flex', 'jutify-content':'flex-start'}">
+      <p [style]="{'width':'50%'}" class="description">{{video?.snippet?.description}}</p>
+    </div>
+  </div>
+
+  <p-dialog [header]="video?.snippet?.title" [(visible)]="displayMaximizable" [modal]="true" [style]="{width: '50vw'}"
+    [maximizable]="true" [baseZIndex]="10000" [draggable]="false" [resizable]="false" [transitionOptions]="'500ms'">
+
+    <iframe [src]="video?.id|sanitizeUrl" [style]="{width:'100%', height:'60vh'}" frameborder="0"></iframe>
+    <!-- 
+    <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" (click)="displayMaximizable=false" label="Ok" styleClass="p-button-text">
+      </p-button>
+    </ng-template> -->
+    <!-- [breakpoints]="{'960px': '75vw', '640px': '100vw'}" -->
+
+  </p-dialog>
+
+  <p-button (click)="showMaximizableDialog()" icon="pi pi-external-link" label="Open video" styleClass="p-button">
+  </p-button>
+
+
+</div>

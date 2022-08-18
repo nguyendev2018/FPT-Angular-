@@ -1,0 +1,22 @@
+.wr-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid #c7c8c9;
+  padding: 1rem 0 0 0;
+  .wr-text-detail {
+    width: 60%;
+    .description {
+      // white-space: pre;
+      white-space: break-spaces;
+    }
+    .info-statistics {
+      display: flex;
+      justify-content: space-between;
+      small {
+        margin: 0 0.3rem;
+      }
+    }
+  }
+}

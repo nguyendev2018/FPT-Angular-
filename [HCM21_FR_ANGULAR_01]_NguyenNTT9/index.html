@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <!-- <link rel="stylesheet" href="vendor/css/boostrap.css"> -->
+        <link rel="stylesheet" href="vendor/scss/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="black"></div>
+            <header class="header">
+                <div class="container header-container">
+                    <div class="header-desktop">
+                        <div class="header-arrow">
+                            <p class="header-arrow--text">Back</p>
+                            <div class="arrow-line"></div>
+                        </div>
+                        <div class="header-infor">
+                            <img src="vendor/img/avatar.png" alt="avatar" title="" class="header-infor--img" />
+                            <div class="header-infor--text">
+                                <h1 class="header-infor--text_name">Pattie Trusdale</h1>
+                                <p class="header-infor--text_position">Full-stack Developer</p>
+                            </div>
+                        </div>
+                        <div class="header-button">
+                            <a href="" class="btn header-button--click"> <span>HIRE</span> </a>
+                        </div>
+                    </div>
+
+                    <div class="header-infor--mobile">
+                        <img src="vendor/img/avatar.png" alt="avatar" title="" class="header-infor--img" />
+                        <div class="header-infor--text">
+                            <h1 class="header-infor--text_name">Pattie Trusdale</h1>
+                            <p class="header-infor--text_position">Full-stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="project box-show" id="project">
+                <div class="max-container">
+                    <div class="project-box click-box">
+                        <h2>Project</h2>
+                        <form action="">
+                            <div class="form-group">
+                                <label for="">Name <span>*</span> </label>
+                                <input type="text" id="pr-name" name="name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="">KeyWord </label>
+                                <input type="text" id="pr-keyword" name="keyword" />
+                                <div class="list-tag">
+                                    <div class="list-tag--item">
+                                        <span class="list-tag--item_text"> #solar_breeze </span>
+
+                                        <span class="list-tag--item_icon">x</span>
+                                    </div>
+                                    <div class="list-tag--item">
+                                        <span class="list-tag--item_text"> #solar_breeze </span>
+
+                                        <span class="list-tag--item_icon">x</span>
+                                    </div>
+                                    <div class="list-tag--item">
+                                        <span class="list-tag--item_text"> #solar_breeze </span>
+
+                                        <span class="list-tag--item_icon">x</span>
+                                    </div>
+                                    <div class="list-tag--item">
+                                        <span class="list-tag--item_text"> #solar_breeze </span>
+
+                                        <span class="list-tag--item_icon">x</span>
+                                    </div>
+                                    <div class="list-tag--item">
+                                        <span class="list-tag--item_text"> #solar_breeze </span>
+
+                                        <span class="list-tag--item_icon">x</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Summary </label>
+                                <textarea name="summary" id="pr-summary" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Website</label>
+                                <input type="text " class="website" name="websiteName" id="pr-web-name" />
+                                <select name="websiteType" id="pr-web-type">
+                                    <option value="1">Official site 1</option>
+                                    <option value="2">Official site 2</option>
+                                    <option value="3">Official site 3</option>
+                                </select>
+                                <span class="text-add">Remove</span>
+                                <p class="text-add">Add other website</p>
+                            </div>
+                            <div class="button">
+                                <span class="btn-text btn-cancel">Cancel</span>
+                                <button class="btn btn-save btn-save-pr">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="features_click box-show" id="features_click">
+                <div class="max-container">
+                    <div class="click-box">
+                        <h2>Features</h2>
+                        <div class="features_click-box">
+                            <div class="features_click-box--item">
+                                <img src="./vendor/img/features_1.png" alt="" />
+                            </div>
+                            <div class="features_click-box--item">
+                                <div class="form-group">
+                                    <label for="">Name <span>*</span> </label>
+                                    <input type="text" name="name_fu" id="name_fu" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Description <span>*</span> </label>
+                                    <textarea name="description_fu" id="description_fu" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="button">
+                                    <span class="btn-text btn-cancel">Cancel</span>
+                                    <button class="btn btn-save btn-save-fu">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gembuck padding-block">
+                <div class="container">
+                    <div class="box-title">
+                        <h2 class="title">Gembucket</h2>
+                        <div class="item-click item-click-project" data-show="project">
+                            <i class="box-title--icon fas fa-pen-square"></i>
+                        </div>
+                    </div>
+                    <div class="gembuck-box--tag">
+                        <a href="" class="gembuck-box--tag_item">#solar_breeze</a>
+                        <a href="" class="gembuck-box--tag_item">#solar_breeze</a>
+                        <a href="" class="gembuck-box--tag_item">#solar_breeze</a>
+                        <a href="" class="gembuck-box--tag_item">#solar_breeze</a>
+                    </div>
+                    <p class="gembuck-content">
+                        Tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio feugiat non pretium quis
+                        lectus suspendisse.
+                    </p>
+                    <p>Official site: <a href="https://gembucket.com" title="https://gembucket.com" class="text-link">https://gembucket.com</a></p>
+                    <div class="gembuck-box--slider">
+                        <img src="./vendor/img/slider.png" alt="slider" title="slider" class="gembuck-box--slider_item" />
+                        <i class="far fa-compass gembuck-box--slider_icon"></i>
+                        <ul class="gembuck-box--slider_dots">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="description padding-block">
+                <div class="container">
+                    <div class="box-title">
+                        <h2 class="title">Description</h2>
+                        <i class="box-title--icon fas fa-pen-square"></i>
+                    </div>
+                    <ul class="description-list">
+                        <li class="description-list--item">
+                            Dugue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel nasand praesent blandit lacinia erat vestibulum sed.
+                        </li>
+                        <li class="description-list--item">Augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</li>
+                        <li class="description-list--item">Liam neque vestibulum eget vulputate ut ultrices vel.</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="features padding-block">
+                <div class="container">
+                    <div class="box-title features-title">
+                        <h3 class="title">Features</h3>
+                        <div class="item-click item-click-features" data-show="features_click">
+                            <i class="box-title--icon fas fa-pen-square"></i>
+                        </div>
+                    </div>
+                    <div class="max-container">
+                        <div class="features-item">
+                            <div class="features-item-title">
+                                <h4 class="title">User research</h4>
+                            </div>
+                            <div class="features-box">
+                                <div class="features-box--img">
+                                    <img src="vendor/img/fa.png" alt="features_1.png" title="features_1.png" />
+                                </div>
+                                <div class="features-box--text">
+                                    <div class="features-box--text_title">
+                                        <h4 class="title">User research</h4>
+                                    </div>
+                                    <p class="features-box--text_content">Metus vitae durea nullam ipsum aliquam non mauris morbi non lectus aliquam sit amet aliquam dieam earn magna bibendum imperdiet nullam orci pede.</p>
+                                    <div class="features-box--text_border"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features-item">
+                            <div class="features-item-title">
+                                <h4 class="title">Getting stakeholder</h4>
+                            </div>
+                            <div class="features-box">
+                                <div class="features-box--img order">
+                                    <img src="vendor/img/features_2.png" alt="features_1.png" title="features_1.png" />
+                                </div>
+                                <div class="features-box--text order">
+                                    <div class="features-box--text_title">
+                                        <h4 class="title">Getting stakeholder</h4>
+                                    </div>
+                                    <p class="features-box--text_content">Ipsum ac tellus semper interdum mauris libero ullamcorper purus sit amet nulla quisque arcu libero rustrum sempereed ac lobortis vel dapibus at.</p>
+                                    <div class="features-box--text_border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div class="features-item-title">
+                                <h4 class="title">User interaction</h4>
+                            </div>
+                            <div class="features-box">
+                                <div class="features-box--img">
+                                    <img src="vendor/img/fa.png" alt="features_1.png" title="features_1.png" />
+                                </div>
+                                <div class="features-box--text">
+                                    <div class="features-box--text_title">
+                                        <h4 class="title">User interaction</h4>
+                                    </div>
+                                    <p class="features-box--text_content">Sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt anteca veal ipsum praesent blandit lacinia erat vestibulum sed at magna.</p>
+                                    <div class="features-box--text_border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team padding-block">
+                <div class="container">
+                    <h2 class="title">Team-members</h2>
+                    <div class="max-container">
+                        <div class="team-box">
+                            <div class="team-box--item">
+                                <span class="team-box--item_text__top">Antons Playden</span>
+                                <img src="vendor/img/team_1.png" alt="" />
+                                <span class="team-box--item_text__right">Antons Playden</span>
+                            </div>
+                            <div class="team-box--item">
+                                <span class="team-box--item_text__top">Lowe Coronas </span>
+                                <img src="vendor/img/team_2.png" alt="" />
+                                <span class="team-box--item_text__right">Lowe Coronas </span>
+                            </div>
+                            <div class="team-box--item">
+                                <span class="team-box--item_text__top">Galvan Bonifas</span>
+                                <img src="vendor/img/team_3.png" alt="" />
+                                <span class="team-box--item_text__right">Galvan Bonifas</span>
+                            </div>
+
+                            <div class="team-box--item">
+                                <span class="team-box--item_text__top">Galvan Bonifas</span>
+                                <img src="vendor/img/team_4.png" alt="" />
+                                <span class="team-box--item_text__right">Galvan Bonifas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact padding-block">
+                <div class="container">
+                    <h2>Want to know more, contact me!</h2>
+                    <div class="max-container">
+                        <div class="contact-general">
+                            <div class="contact-box contact-list">
+                                <ul class="contact-box--list">
+                                    <li class="contact-box--list__item"><i class="far fa-envelope-open-text icon"></i>pattietrusdale@gmail.com</li>
+                                    <li class="contact-box--list__item"><i class="far fa-phone icon"></i>+8421 223 2234</li>
+                                    <li class="contact-box--list__item"><i class="far fa-location icon"></i>34 Milwaukee Avenue</li>
+                                    <li class="contact-box--list__item"></li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <div class="contact-list--item">
+                                    <i class="fab fa-github icon"></i>
+                                    <span>github.com/pattietrusdale</span>
+                                </div>
+                                <div class="contact-list--item">
+                                    <i class="fab fa-linkedin icon"></i>
+                                    <span>linkedin.com/in/pattie-trusdale-34...</span>
+                                </div>
+                                <div class="contact-list--item">
+                                    <i class="fab fa-facebook icon"></i>
+                                    <span>facebook.com/pattie.trusdale</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="footer-list container">
+                <div class="footer-list--item">
+                    <span>Copyright 2019 © Academic System</span>
+                </div>
+                <div class="footer-list--item">
+                    <span>Designed & Developed by Quang Dat Pham</span>
+                </div>
+            </div>
+        </footer>
+        <script src="vendor/js/font-awesome.js"></script>
+        <script src="vendor/js/main.js"></script>
+    </body>
+</html>

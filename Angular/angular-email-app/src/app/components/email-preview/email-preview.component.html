@@ -1,0 +1,28 @@
+<p-table
+    [value]="messages"
+    styleClass="p-datatable-gridlines"
+    selectionMode="single"
+    [(selection)]="message"
+>
+    <ng-template pTemplate="header">
+        <tr class="thead">
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Date</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-message>
+        <tr
+            class="message"
+            [pSelectableRow]="message"
+            [routerLink]="[
+                '/message',
+                { outlets: { content: ['content', message._id] } }
+            ]"
+        >
+            <td>{{ message.senderName | senderPipe }}</td>
+            <td>{{ message.subject }}</td>
+            <td>{{ message.date | date: "y-MM-dd" }}</td>
+        </tr>
+    </ng-template>
+</p-table>

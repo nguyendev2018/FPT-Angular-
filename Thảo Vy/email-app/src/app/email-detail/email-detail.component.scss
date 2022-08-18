@@ -1,0 +1,29 @@
+.emailContent {
+  margin-top: 20px;
+  position: absolute;
+  left: 0;
+  color: #000;
+  .emailContent__header {
+    background-color: #8080808f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    .emailContent__subject,
+    .emailContent__date {
+      margin: 0;
+    }
+    .btnFunc {
+      p-button {
+        margin-left: 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .emailContent__body {
+    padding: 20px;
+    text-align: justify;
+  }
+}

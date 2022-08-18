@@ -1,0 +1,29 @@
+
+
+<div class="bg-login">
+  <form [formGroup]="searchForm">
+  <div class="form-group">
+    <label>UserName</label>
+    <input pInputText type="text" formControlName="username" />
+    <div class="" *ngIf="username.invalid && (username.dirty || username.touched)">
+      <span class="error" *ngIf="username.errors?.required">Bạn phải nhập Username !</span>
+      <span class="error" *ngIf="username.errors?.minlength">
+        Username phải nhập ít nhất 4 chữ
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" pInputText  formControlName="password" />
+    <div class="" *ngIf="password.invalid && (password.dirty || password.touched)">
+    <span class="error" *ngIf="password.errors?.required">Bạn phải nhập Password !</span>
+    <span class="error" *ngIf="password.errors?.minlength">
+      Password phải nhập ít nhất 6 chữ số
+    </span>
+    </div>
+  </div>
+</form>
+<button class="button-login" pButton type="button" (click)="login()" [disabled]="!searchForm.valid">Login</button>
+</div>
+
+<p-messages [(value)]="msgs2" [enableService]="false"></p-messages>

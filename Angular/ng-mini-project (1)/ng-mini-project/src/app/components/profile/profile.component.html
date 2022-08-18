@@ -1,0 +1,80 @@
+<div class="profile">
+	<div class="profile-avatar">
+		<div class="card">
+			<img src="https://picsum.photos/300" alt="Avatar" />
+			<div class="card-footer">
+				<p class="card-name">{{ name }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="profile-info">
+		<div class="profile-title">
+			<h3>My Profile</h3>
+			<div class="border">
+				<div class="border-item border-item-left"></div>
+				<div class="border-item border-item-right"></div>
+			</div>
+		</div>
+		<div class="profile-form">
+			<form [formGroup]="formProfile" (ngSubmit)="onSubmit()">
+				<div class="profile-form-item">
+					<div class="form-group">
+						<label for="firstName">name</label>
+						<input type="text" pInputText class="form-control" id="firstName"
+							placeholder="Enter your fisrt name" formControlName="firstName" />
+						<p class="error" *ngIf="isInvalidControl('firstName')">
+							<span *ngIf="getError('firstName', 'required')">First name is required!</span>
+							<span *ngIf="getError('firstName', 'minlength')">First name must have at least 4
+								characters!!</span>
+							<span *ngIf="getError('firstName', 'maxlength')">First name can be up to 50
+								characters!1</span>
+						</p>
+					</div>
+					<div class="form-group">
+						<label for="lastName">Last Name</label>
+						<input type="text" pInputText class="form-control" id="lastName"
+							placeholder="Enter your last name" formControlName="lastName" />
+						<p class="error" *ngIf="isInvalidControl('lastName')">
+							<span *ngIf="getError('lastName', 'required')">Last name is required!</span>
+							<span *ngIf="getError('lastName', 'minlength')">Last name must have at least 4
+								characters!!</span>
+							<span *ngIf="getError('lastName', 'maxlength')">Last name can be up to 50
+								characters!1</span>
+						</p>
+					</div>
+				</div>
+				<p class="profile-form-title">Change Password</p>
+				<div class="profile-form-item">
+					<div class="form-group">
+						<label for="password">New Password</label>
+						<div class="p-inputgroup">
+							<span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+							<input type="password" pInputText placeholder="Enter your new password"
+								formControlName="password" />
+						</div>
+						<p class="error" *ngIf="isInvalidControl('password')">
+							<span *ngIf="getError('password', 'minlength')">Password must have at least 6
+								characters!!</span>
+							<span *ngIf="getError('password', 'maxlength')">Password can be up to 50 characters!</span>
+						</p>
+					</div>
+					<div class="form-group">
+						<label for="confirm">re-type new password</label>
+						<div class="p-inputgroup">
+							<span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+							<input type="password" pInputText placeholder="Enter your new password"
+								formControlName="confirm" />
+						</div>
+					</div>
+				</div>
+				<div class="profile-handle">
+					<button type="submit" class="btn btn-primary">SAVE CHANGES</button>
+					<button type="button" class="btn btn-secondary" (click)="onSignout()">
+						<i class="pi pi-sign-out"></i>
+						Log out
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

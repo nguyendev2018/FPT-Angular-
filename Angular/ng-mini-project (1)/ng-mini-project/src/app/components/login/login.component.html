@@ -1,0 +1,35 @@
+<div class="form">
+	<div class="form-header">
+		<p>Login</p>
+	</div>
+	<div class="form-body">
+		<form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" pInputText class="form-control" id="username" placeholder="Username"
+					formControlName="username" />
+				<p class="error" *ngIf="isInvalidControl('username')">
+					The field is required!!
+				</p>
+			</div>
+			<div class="form-group">
+				<label for="password">password</label>
+				<input type="password" pInputText class="form-control" id="password" placeholder="Password"
+					formControlName="password" />
+				<p class="error" *ngIf="isInvalidControl('password')">
+					The field is required!!
+				</p>
+			</div>
+			<div class="form-footer">
+				<div class="p-field-checkbox">
+					<p-checkbox binary="true" inputId="binary" formControlName="remember"></p-checkbox>
+					<label for="binary" style="padding-left: 16px; color: white; font-size: 18px">
+						Remember me
+					</label>
+				</div>
+				<button type="submit" pButton label="LOGIN"
+					class="p-button-success p-button-rounded p-button-lg btn"></button>
+			</div>
+		</form>
+	</div>
+</div>

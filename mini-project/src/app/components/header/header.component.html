@@ -1,0 +1,12 @@
+<header>
+  <ul>
+    <li *ngIf="!username; else profile" routerLinkActive="selected">
+      <a [routerLink]="['login']"> <i class="pi pi-user" ></i> Login</a>
+    </li>
+    <li routerLinkActive="selected"><a [routerLink]="['register']" >Register</a></li>
+  </ul>
+</header>
+<ng-template #profile>
+  <li routerLinkActive="selected"><a routerLink="/profile/{{username}}" >{{username}}</a></li>
+  <li [style]="{'cursor': 'pointer'}"><a (click)="logout()"> Logout</a></li>
+</ng-template>

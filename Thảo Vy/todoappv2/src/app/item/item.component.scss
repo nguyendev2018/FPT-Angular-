@@ -1,0 +1,21 @@
+.todolist__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.todolist__item {
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+.btnFunc {
+  .btn {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

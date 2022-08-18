@@ -1,0 +1,46 @@
+<div class="top_nav">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a routerLink="mymessages" routerLinkActive="selected" class="nav-link">
+          mymessages
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="contacts" routerLinkActive="selected" class="nav-link">
+          contacts
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="preferences"
+          routerLinkActive="selected"
+          class="nav-link"
+        >
+          preferences
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="nav_right">
+    <span class="email"> myself@angular.dev</span>
+    <div class="logout-menu">
+      <button
+        pButton
+        icon="pi pi-chevron-down"
+        class="p-button-sm button_dropdown"
+      ></button>
+      <a class="logout">Logout</a>
+    </div>
+
+    <button
+      pButton
+      type="button"
+      icon="pi pi-home"
+      class="p-button-info mr-10"
+    ></button>
+    <button pButton type="button" class="p-button-info">New message</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

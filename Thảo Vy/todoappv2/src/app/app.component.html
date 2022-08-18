@@ -1,0 +1,28 @@
+<div class="card todolist text-center">
+  <div class="card-header">
+    <h1>To-Do List</h1>
+    <div class="todolist__intruction">
+      <p>Enter text into the input field to add items to your list.</p>
+      <p>Click the "X" to remove the item from your list.</p>
+      <p>Click the item to mark it as complete.</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <app-input (addItem)="handleAdd($event)"></app-input>
+    <app-list  [toDoList]="toDoList"  [str]="str"  (changeStatus)="handleChange($event)"  (remove)="handleRemove($event)"  (upPriority)="handleUp($event)"  (downPriority)="handleDown($event)"
+    ></app-list>
+    <div *ngIf="toDoList.length > 0" class="desPriority">
+      <span>Priority: </span>
+      <span class="priority p1"></span>
+      <span class="priorityNumber">1</span>
+      <span class="priority p2"></span>
+      <span class="priorityNumber">2</span>
+      <span class="priority p3"></span>
+      <span class="priorityNumber">3</span>
+      <span class="priority p4"></span>
+      <span class="priorityNumber">4</span>
+      <span class="priority p5"></span>
+      <span class="priorityNumber">5</span>
+    </div>
+  </div>
+</div>
